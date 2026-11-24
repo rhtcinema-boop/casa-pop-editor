@@ -210,7 +210,7 @@ select{font:inherit;font-weight:800;padding:8px 10px;border-radius:12px;border:1
     if(e.w){inlineFix(el);el.style.setProperty('width',e.w+'px','important')}else el.style.removeProperty('width');
     if(e.h){inlineFix(el);el.style.setProperty('height',e.h+'px','important')}else el.style.removeProperty('height');
     if(e.z){if(getComputedStyle(el).position==='static')el.style.position='relative';el.style.setProperty('z-index',String(e.z),'important')}else el.style.removeProperty('z-index');
-    if(e.hide)el.style.setProperty('opacity','.12');else el.style.removeProperty('opacity');
+    if(e.hide)el.style.setProperty('visibility','hidden','important');else el.style.removeProperty('visibility');
   }
   function clearAll(){Object.keys(edits).forEach(function(p){var el=elOf(p);if(el)applyOne(el,null)})}
   function applyAll(){Object.keys(edits).forEach(function(p){var el=elOf(p);if(el)applyOne(el,edits[p])})}
@@ -261,7 +261,7 @@ select{font:inherit;font-weight:800;padding:8px 10px;border-radius:12px;border:1
   /* 選んだ物の枠とつまみ */
   function rectIn(el){var r=el.getBoundingClientRect(),s=stage.getBoundingClientRect();return {x:r.left-s.left,y:r.top-s.top,w:r.width,h:r.height}}
   function place(){
-    if(!cur||!cur.isConnected){box.classList.remove('show');return}
+    if(!cur||!cur.isConnected||getComputedStyle(cur).visibility==='hidden'){box.classList.remove('show');return}
     var r=rectIn(cur);box.style.left=r.x+'px';box.style.top=r.y+'px';box.style.width=r.w+'px';box.style.height=r.h+'px';box.classList.add('show');
   }
   function showHover(el){
@@ -300,7 +300,7 @@ select{font:inherit;font-weight:800;padding:8px 10px;border-radius:12px;border:1
   $('wUp').onclick=function(){size('w',10)};$('wDown').onclick=function(){size('w',-10)};
   $('hUp').onclick=function(){size('h',10)};$('hDown').onclick=function(){size('h',-10)};
   $('zUp').onclick=function(){zmove(1);drawTree()};$('zDown').onclick=function(){zmove(-1);drawTree()};
-  $('hideBtn').onclick=function(){change(function(e){e.hide=e.hide?0:1});drawTree()};
+  $('hideBtn').onclick=function(){var h=!(edits[pathOf(cur)]||{}).hide;change(function(e){e.hide=e.hide?0:1});if(h)select(null);else drawTree()};
   $('pickParent').onclick=function(){if(cur&&cur.parentElement&&cur.parentElement!==root)select(cur.parentElement)};
   $('resetOne').onclick=function(){if(!cur)return;var p=pathOf(cur);if(!edits[p])return;push();delete edits[p];applyOne(cur,null);dirty=true;say('まだ保存していません');showVal();place();drawTree()};
   $('resetAll').onclick=function(){
