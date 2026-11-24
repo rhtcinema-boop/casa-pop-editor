@@ -13,5 +13,15 @@
   "id": "sapporo",
   "name": "札幌 冬の大還元祭",
   "kind": "layers"
+ },
+ {
+  "id": "shibuya",
+  "name": "渋谷 冬の大還元祭",
+  "kind": "layers"
+ },
+ {
+  "id": "ueno",
+  "name": "上野 冬の大還元祭",
+  "kind": "layers"
  }
 ]
