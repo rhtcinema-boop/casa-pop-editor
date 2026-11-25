@@ -15,6 +15,26 @@
   "kind": "layers"
  },
  {
+  "id": "sapporo_fes",
+  "name": "sapporo_fes",
+  "kind": "layers"
+ },
+ {
+  "id": "sapporo_gc",
+  "name": "sapporo_gc",
+  "kind": "layers"
+ },
+ {
+  "id": "sapporo_kata",
+  "name": "sapporo_kata",
+  "kind": "layers"
+ },
+ {
+  "id": "sapporo_yt",
+  "name": "sapporo_yt",
+  "kind": "layers"
+ },
+ {
   "id": "shibuya",
   "name": "渋谷 冬の大還元祭",
   "kind": "layers"
@@ -23,5 +43,20 @@
   "id": "ueno",
   "name": "上野 冬の大還元祭",
   "kind": "layers"
+ },
+ {
+  "id": "winter_sapporo",
+  "name": "札幌 冬の大還元祭 3大特典",
+  "kind": "flat"
+ },
+ {
+  "id": "winter_shibuya",
+  "name": "渋谷 冬の大還元祭 3大特典",
+  "kind": "flat"
+ },
+ {
+  "id": "winter_ueno",
+  "name": "上野 冬の大還元祭 3大特典",
+  "kind": "flat"
  }
 ]
