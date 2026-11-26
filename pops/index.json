@@ -20,6 +20,11 @@
   "kind": "layers"
  },
  {
+  "id": "derbyboat_blue",
+  "name": "DERBY × BOAT 青",
+  "kind": "flat"
+ },
+ {
   "id": "item8",
   "name": "ITEM CARD 全8種類 説明",
   "kind": "flat"
