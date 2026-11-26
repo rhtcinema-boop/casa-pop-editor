@@ -35,6 +35,11 @@
   "kind": "flat"
  },
  {
+  "id": "kashitaku_ueno",
+  "name": "貸卓 casa上野",
+  "kind": "flat"
+ },
+ {
   "id": "sapporo",
   "name": "札幌 冬の大還元祭",
   "kind": "layers"
