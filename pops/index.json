@@ -1,5 +1,10 @@
 [
  {
+  "id": "amuse_sapporo",
+  "name": "札幌 AMUSE RING 最安値",
+  "kind": "flat"
+ },
+ {
   "id": "derbyboat",
   "name": "DERBY × BOAT 遊び方",
   "kind": "layers"
